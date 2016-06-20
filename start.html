@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="og:title" content="AnnealMail - hide email from Quantum Computers"/>
+    <meta name="og:description" content="An experimental fork of Enigmail that uses algorithms that foil quantum computing."/>
+
+    <title>AnnealMail</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="page-header">
+            <h1>
+              AnnealMail
+              <small>post-quantum encryption for your email</small>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="row explainer">
+        <div class="col-sm-12">
+          <h4>
+            named for the process at the core of quantum computers:
+            <a href="https://en.wikipedia.org/wiki/Quantum_annealing">quantum annealing</a>
+          </h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Firefox</h3>
+          <p>AES is easier to decrypt with quantum computers, but a 256-bit key (AES-256) is still as reliable
+          as an 128-bit key on classical computers, which is generally accepted as secure as of this writing (2016).</p>
+          <p>You can disable AES-128 and other ciphers in Mozilla Firefox, leaving all secure connections to be made with AES-256.</p>
+          <ol>
+            <li>type or paste <code>about:config</code> in your location bar; press enter</li>
+            <li>click the "I'll be careful" button</li>
+            <li>type into search <code>security.ssl3</code></li>
+            <li>double-click rows to turn individual options on and off</li>
+            <li>set the final column to 'true' if it has <code>aes_256</code> in it, and false otherwise</li>
+            <li>visit <a href="https://cc.dcsec.uni-hannover.de/">cc.dcsec.uni-hannover.de</a>. All of your options should have AES_256 in them.</li>
+            <li>you can also check out <a href="https://howsmyssl.com/">howsmyssl.com</a>.</li>
+          </ol>
+        </div>
+        <div class="col-sm-6">
+          <h3>Chrome</h3>
+          <p>For reasons explained on the Firefox page, you want to disable ciphers which might be preferred ahead of the more secure, AES-256-based ciphers.</p>
+          <p>You want to add <code>--args --cipher-suite-blacklist=0x2B,0x2F,0xA9,0xA8</code> to your Chrome startup command line arguments.</p>
+          <strong>Work in progress: I was not able to disable 0x2B and 0x2F? Visit <a href="https://cc.dcsec.uni-hannover.de/">cc.dcsec.uni-hannover.de</a> and <a href="https://howsmyssl.com/">howsmyssl.com</a>.</strong>
+          <p>Help plz... I don't know how to disable different encryption ciphers on Chrome.</p>
+          <a class="btn btn-primary" href="https://github.com/mapmeld/annealmail/issues">
+            Tell me on GitHub Issues
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

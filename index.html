@@ -2,9 +2,69 @@
 <html>
   <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="og:title" content="AnnealMail - hide email from Quantum Computers"/>
+    <meta name="og:description" content="An experimental fork of Enigmail that uses algorithms that foil quantum computing."/>
+
     <title>AnnealMail</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
   </head>
   <body>
-    <h1>Coming soon</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="page-header">
+            <h1>
+              AnnealMail
+              <small>post-quantum encryption for your email</small>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="row explainer">
+        <div class="col-sm-12">
+          <h4>
+            named for the process at the core of quantum computers:
+            <a href="https://en.wikipedia.org/wiki/Quantum_annealing">quantum annealing</a>
+          </h4>
+          <h4>
+            <a href="/start.html">start using smarter encryption today</a> in your browser
+          </h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>What makes AnnealMail special?</h3>
+          <ul>
+            <li>GPG/PGP encryption is replaced by
+              <a href="https://github.com/exaexa/codecrypt">CodeCrypt</a>
+            </li>
+            <li>gpg's factorization and elliptical curves are replaced by algorithms
+            believed to be much more resilient to quantum computers</li>
+            <li>even before quantum computers are developed, you can start encrypting your
+            communication so it's difficult to decrypt later</li>
+          </ul>
+          <h3>Steps</h3>
+          <ol>
+            <li>Hide any features other than signing and verifying messages</li>
+            <li>Create a replacement for gpg-agent, to manage keys</li>
+            <li>Write documentation to install CodeCrypt and use the plugin, including information about quantum computing.</li>
+            <li>Release a beta plugin for signing and verifying messages using CodeCrypt</li>
+            <li>Adapt Enigmail's translations and documentation for Annealmail</li>
+          </ol>
+        </div>
+        <div class="col-sm-6">
+          <h3>An open source experiment</h3>
+          <p>This plugin is based on the popular and user-tested <a href="https://enigmail.mozdev.org">Enigmail</a> plugin
+          for encrypting mail in Thunderbird. Changing over to AnnealMail for available options should
+          be simple and secure.</p>
+          <p>Very few people have used AnnealMail's underlying encryption and decryption,
+          so it's best to keep Enigmail and use message-signing unless your contact
+          recommends that you both use AnnealMail.</p>
+          <p>This project is not authorized by the developers of Enigmail or CodeCrypt. Use at your own risk.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
