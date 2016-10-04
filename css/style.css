@@ -1,5 +1,9 @@
 .explainer h4 {
-  text-align: center;  
+  text-align: center;
+}
+
+li {
+  margin-bottom: 12px;
 }
 
 @media (max-width: 800px) {

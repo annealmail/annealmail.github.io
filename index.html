@@ -27,6 +27,7 @@
       </div>
       <div class="row explainer">
         <div class="col-sm-12">
+          <br/>
           <h4>
             named for the physical process used by some quantum computers:
             <a href="https://en.wikipedia.org/wiki/Quantum_annealing">quantum annealing</a>
@@ -34,6 +35,7 @@
           <h4>
             <a href="start.html">start using smarter encryption today</a> in your browser
           </h4>
+          <br/>
 <!--
           <h4>
             <a href="papers.html">read papers and watch videos</a> about quantum computing and encryption
@@ -48,16 +50,20 @@
             <li>GPG/PGP encryption is replaced by
               <a href="https://github.com/exaexa/codecrypt">CodeCrypt</a>
             </li>
-            <li>CodeCrypt's algorithms are believed to be much more resilient to analysis by quantum computers</li>
-            <li>even before quantum computers are developed, you can start encrypting your
-            communication so it's more difficult to decrypt later</li>
+            <li>CodeCrypt's algorithms are believed to be more resilient to analysis by both quantum and classical computers</li>
+            <li>Learn more about <a href="https://medium.com/@mapmeld/post-quantum-encryption-411e3337b3be">Post-Quantum Encryption</a></li>
+            <li>Even before quantum computers are developed, you can start encrypting your
+            communication so that it's more difficult to capture and decrypt later</li>
           </ul>
           <br/>
         </div>
         <div class="col-sm-6">
           <h3>An open source experiment</h3>
-          <p>This plugin is based entirely on the popular and user-tested <a href="https://enigmail.mozdev.org">Enigmail</a> plugin
-          for encrypting mail in Thunderbird. If you've used encrypted e-mail before, the experience should be similar.</p>
+          <a class="btn btn-danger pull-right" href="https://github.com/annealmail/annealmail">Source Code on GitHub</a>
+          <p>This plugin is based on the popular and user-tested <a href="https://enigmail.mozdev.org">Enigmail</a> plugin
+          for encrypting mail in Thunderbird, and Mirek Kratochvil's exprimental <a href="https://github.com/exaexa/codecrypt">CodeCrypt</a> command line tool.
+          </p>
+          <p>If you've used encrypted e-mail before, the experience should be similar.</p>
           <p>AnnealMail is not tested as rigorously and is just an experiment. DO NOT USE this for mission-critical things.</p>
           <p>This project is not affiliated with Thunderbird, Enigmail, or CodeCrypt. Use at your own risk.</p>
         </div>
@@ -78,19 +84,25 @@
               </li>
               <li>Verify that CodeCrypt is installed on the command line (enter: ccr)</li>
               <li>sudo cp /usr/local/bin/ccr /usr/local/bin/ccr-agent</li>
-              <li>Generate signing and encryption keys with CodeCrypt, and share the public keys</li>
+              <li>Generate signing and encryption keys with CodeCrypt, with your e-mail as your name. Share the public keys.</li>
               <li><a href="/builds/annealmail-2.0.xpi">Download AnnealMail extension</a></li>
-              <li>Drag/drop the AnnealMail extension into Thunderbird's AddOns tab and restart Thunderbird</li>
-              <li>Create an email draft. In the AnnealMail menu, select Protocol: Inline CCR</li>
-              <li>In AnnealMail > Preferences > Signing/Encryption Options, select your preferred signing key</li>
+              <li>Drag/drop the AnnealMail extension into Thunderbird's AddOns tab and restart Thunderbird.</li>
+              <li>Create an email draft. In the AnnealMail menu, select Protocol: CCR/MIME</li>
+              <li>In AnnealMail > Preferences > Signing/Encryption Options, select your preferred signing key.</li>
             </ol>
           </div>
         </div>
         <div class="col-sm-4">
-          <h4>Sample Keys</h4>
-          <p>CodeCrypt uses different algorithms for encryption and signatures, so users create four keys: public encryption, private encryption, public signing, and private signing. Here are my public keys:</p>
-          <a href="doiron.asc" class="btn btn-info">Download My Public Encryption Key</a> - ndoiron@mapmeld.com
-          <a href="doiron-sign.asc" class="btn btn-info">Download My Public Signature Key</a> - ndoiron@mapmeld.com
+          <h4>Contact Me</h4>
+          <p>CodeCrypt uses different algorithms for encrypting and signing messages, so users create four keys: public encryption, private encryption, public signing, and private signing. Here are my public keys:</p>
+          <a href="doiron.asc" class="btn btn-info">Download My Public Encryption Key</a>
+          <br/>
+          <br/>
+          <a href="doiron-sign.asc" class="btn btn-info">Download My Public Signing Key</a>
+          <br/>ndoiron@mapmeld.com
+          <br/><br/>
+          I'm Nick Doiron, web developer consultant.<br/><br/>
+          If you run into issues, you can send me e-mail (encryption optional) or Tweet <a href="https://twitter.com/mapmeld">@mapmeld</a>
         </div>
         <div class="col-sm-1"></div>
       </div>
