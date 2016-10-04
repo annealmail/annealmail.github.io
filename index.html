@@ -15,6 +15,9 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="page-header">
+            <a class="btn btn-primary pull-right" href="/builds/annealmail-2.0.xpi">
+              Download Alpha
+            </a>
             <h1>
               AnnealMail
               <small>post-quantum encryption for your email</small>
@@ -31,9 +34,11 @@
           <h4>
             <a href="/start.html">start using smarter encryption today</a> in your browser
           </h4>
+<!--
           <h4>
             <a href="/papers.html">read papers and watch videos</a> about quantum computing and encryption
           </h4>
+-->
         </div>
       </div>
       <div class="row">
@@ -43,29 +48,17 @@
             <li>GPG/PGP encryption is replaced by
               <a href="https://github.com/exaexa/codecrypt">CodeCrypt</a>
             </li>
-            <li>gpg's factorization and elliptical curves are replaced by algorithms
-            believed to be much more resilient to quantum computers</li>
+            <li>CodeCrypt's algorithms are believed to be much more resilient to analysis quantum computers</li>
             <li>even before quantum computers are developed, you can start encrypting your
-            communication so it's difficult to decrypt later</li>
+            communication so it's more difficult to decrypt later</li>
           </ul>
-          <h3>Steps</h3>
-          <ol>
-            <li>Hide any features other than signing and verifying messages</li>
-            <li>Create a replacement for gpg-agent, to manage keys</li>
-            <li>Write documentation to install CodeCrypt and use the plugin, including information about quantum computing.</li>
-            <li>Release a beta plugin for signing and verifying messages using CodeCrypt</li>
-            <li>Adapt Enigmail's translations and documentation for Annealmail</li>
-          </ol>
         </div>
         <div class="col-sm-6">
           <h3>An open source experiment</h3>
-          <p>This plugin is based on the popular and user-tested <a href="https://enigmail.mozdev.org">Enigmail</a> plugin
-          for encrypting mail in Thunderbird. Changing over to AnnealMail for available options should
-          be simple and secure.</p>
-          <p>Very few people have used AnnealMail's underlying encryption and decryption,
-          so it's best to keep Enigmail and use message-signing unless your contact
-          recommends that you both use AnnealMail.</p>
-          <p>This project is not authorized by the developers of Enigmail or CodeCrypt. Use at your own risk.</p>
+          <p>This plugin is based entirely on the popular and user-tested <a href="https://enigmail.mozdev.org">Enigmail</a> plugin
+          for encrypting mail in Thunderbird. If you've used encrypted e-mail before, the experience should be similar.</p>
+          <p>AnnealMail is not tested as rigorously and is just an experiment. DO NOT USE this for mission-critical things.</p>
+          <p>This project is not affiliated with Thunderbird, Enigmail, or CodeCrypt. Use at your own risk.</p>
         </div>
       </div>
     </div>
