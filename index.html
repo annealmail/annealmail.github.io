@@ -48,11 +48,10 @@
             <li>GPG/PGP encryption is replaced by
               <a href="https://github.com/exaexa/codecrypt">CodeCrypt</a>
             </li>
-            <li>CodeCrypt's algorithms are believed to be much more resilient to analysis quantum computers</li>
+            <li>CodeCrypt's algorithms are believed to be much more resilient to analysis by quantum computers</li>
             <li>even before quantum computers are developed, you can start encrypting your
             communication so it's more difficult to decrypt later</li>
           </ul>
-          <a href="doiron.asc" class="btn btn-info">Download My Key</a> - ndoiron@mapmeld.com
           <br/>
         </div>
         <div class="col-sm-6">
@@ -62,6 +61,38 @@
           <p>AnnealMail is not tested as rigorously and is just an experiment. DO NOT USE this for mission-critical things.</p>
           <p>This project is not affiliated with Thunderbird, Enigmail, or CodeCrypt. Use at your own risk.</p>
         </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-6">
+          <div class="well">
+            <h4>Installation Instructions</h4>
+            <ol>
+              <li>On a Linux or Mac OSX computer, install
+                <a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird</a> and confirm that you can send an (unencrypted) email.
+              </li>
+              <li>
+                <a href="https://github.com/exaexa/codecrypt">Install CodeCrypt</a> from source
+                (with <a href="https://github.com/exaexa/codecrypt/issues/15">these changes</a> for Mac OSX)
+              </li>
+              <li>Verify that CodeCrypt is installed on the command line (enter: ccr)</li>
+              <li>sudo cp /usr/local/bin/ccr /usr/local/bin/ccr-agent</li>
+              <li>Generate signing and encryption keys with CodeCrypt, and share the public keys</li>
+              <li><a href="/builds/annealmail-2.0.xpi">Download AnnealMail extension</a></li>
+              <li>Drag/drop the AnnealMail extension into Thunderbird's AddOns tab and restart Thunderbird</li>
+              <li>Create an email draft. In the AnnealMail menu, select Protocol: Inline CCR</li>
+              <li>In AnnealMail > Preferences > Signing/Encryption Options, select your preferred signing key</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <h4>Sample Keys</h4>
+          <p>CodeCrypt uses different algorithms for encryption and signatures, so users create four keys: public encryption, private encryption, public signing, and private signing. Here are my public keys:</p>
+          <a href="doiron.asc" class="btn btn-info">Download My Public Encryption Key</a> - ndoiron@mapmeld.com
+          <a href="doiron-sign.asc" class="btn btn-info">Download My Public Signature Key</a> - ndoiron@mapmeld.com
+        </div>
+        <div class="col-sm-1"></div>
       </div>
     </div>
   </body>
